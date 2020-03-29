@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes } from './routes';
+import { Link, BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <ul>
+        <li>
+          <Link to="/">Simple Data Fetching</Link>
+        </li>
+        <li>
+          <Link to="/trigger-hooks-programmatically">Trigger Hooks Programmatically</Link>
+        </li>
+        <li>
+          <Link to="/custom-data-fetching-hook">Custom Data Fetching Hook</Link>
+        </li>
+        <li>
+          <Link to="/reducer-hook-data-fetching">Reducer Hook Data Fetching</Link>
+        </li>
+      </ul>
+      <Routes />
+    </BrowserRouter>
+  )
 }
 
 export default App;
